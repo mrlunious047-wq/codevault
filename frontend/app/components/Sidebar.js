@@ -86,4 +86,47 @@ export default function Sidebar() {
         {/* Quick Actions */}
         {!collapsed && (
           <div className="mt-8">
-            <h3 className="text-xs uppercase text-gray-500 font-semibold mb
+            <h3 className="text-xs uppercase text-gray-500 font-semibold mb-3 px-3">
+              Quick Actions
+            </h3>
+            <div className="space-y-2">
+              <button className="w-full flex items-center gap-3 p-3 bg-gradient-green/10 text-green-400 rounded-lg border border-green-500/30 hover:bg-gradient-green/20 transition">
+                <Sparkles size={18} />
+                <span className="font-medium">New Project</span>
+              </button>
+              <button className="w-full flex items-center gap-3 p-3 bg-blue-500/10 text-blue-400 rounded-lg border border-blue-500/30 hover:bg-blue-500/20 transition">
+                <Zap size={18} />
+                <span className="font-medium">AI Assistant</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* User Section */}
+      <div className="p-4 border-t border-green-900/50">
+        {!collapsed ? (
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-green rounded-full"></div>
+              <div>
+                <p className="font-medium">John Doe</p>
+                <p className="text-xs text-gray-500">Pro Plan</p>
+              </div>
+            </div>
+            <button className="text-gray-400 hover:text-red-400">
+              <LogOut size={18} />
+            </button>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-2">
+            <div className="w-8 h-8 bg-gradient-green rounded-full"></div>
+            <button className="text-gray-400 hover:text-red-400">
+              <LogOut size={18} />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
